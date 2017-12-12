@@ -1,0 +1,159 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400|Open+Sans:400,300,700);
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #333;
+    color: #fff;
+    text-align: center;
+}
+
+:focus {
+    outline: 0;
+}
+
+
+#showcase {
+    min-height: 400px;
+}
+
+#showcase .bg-image {
+    position: absolute;
+    background: #333 url('img/food.png');
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: none;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+h1, h2 {
+    margin: 0;
+    text-transform: uppercase;
+    opacity: 0.7;  
+}
+
+h2 {
+    letter-spacing: 12px;
+    font-family: 'lato';
+    padding: 15px;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-family: 'open sans';
+    font-size: 6.5rem;
+    letter-spacing: 4px;
+}
+
+
+/* form */
+.search-bar {
+    white-space: nowrap;
+    margin: 20px;
+    opacity: 0.8;
+  }
+
+.search-bar .search{
+    width: 100%;
+    height: 50px;
+    background: #2b303b;
+    border: none;
+    font-size: 1rem;
+    float: left;
+    color: #fff;
+    padding-left: 15px;
+    border-radius: 5px;
+}
+
+.search-bar button.icon{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: none;
+    background: white;
+    height: 50px;
+    width: 50px;
+    color: #4f5b66;
+    opacity: 1;
+    font-size: 10pt;
+    margin-left: -50px;
+}
+
+.search-bar button.icon:hover {
+    background: #eaeaea;
+}
+
+/* search results */
+
+.results ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.results ul li {
+    border: 1px solid rgba(0, 23, 23, 0.2);
+}
+
+.results li:hover {
+    background: rgba(0, 23, 23, 0.1);
+    cursor: pointer;
+}
+
+.results .src {
+    width: 100%;
+}
+
+.results h3,p {
+    font-family: 'lato';
+    font-weight: 350;
+    opacity: 0.8;
+}
+
+
+footer h3 {
+    font-family: 'lato';
+    font-weight: 200;
+    font-size: 0.8em;
+    letter-spacing: 1px;
+    opacity: 0.6;
+}
+
+.none {
+    display: none !important;
+}
+
+ @media(min-width: 700px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    #showcase .content-wrap {
+        grid-column: 2/4;
+    }
+
+    ul li {
+        grid-column: span 2;
+    }
+    
+    footer {
+      align-self: end;
+    }
+
+    footer h3 {
+        grid-column: 2/4;
+        align-self: end;
+    }
+}
+
+@media(min-width: 1100px) { 
+   ul li {
+     grid-column: span 1;
+   }
+} 
+

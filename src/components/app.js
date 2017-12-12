@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import SearchBar from '../containers/searchBar';
-import RecipesList from '../containers/recipesList';
+import SearchResults from '../containers/searchResults';
 
 export default class App extends Component {
   render() {
     return (
       <div>
         <SearchBar />
-        <RecipesList />
+        <SearchResults />
       </div>
     );
   }

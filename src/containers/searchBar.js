@@ -1,41 +1,47 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import { searchRecipes } from '../actions/index';
+import { searchRecipes, searchTermChanged } from '../actions';
 
 class SearchBar extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            term: ''
-        }
-
-        this.onInputChange = this.onInputChange.bind(this);
-        this.onFormSubmit = this.onFormSubmit.bind(this);
+    
+    onInputChange(e) {
+        e.preventDefault();
+        this.props.searchTermChanged(e.target.value);
+    }
+    
+    onFormSubmit(e) {
+        e.preventDefault();
+        this.props.searchRecipes(this.props.term);
     }
 
-    onInputChange(event) {
-        this.setState({term: event.target.value});
-    }
-
-    onFormSubmit(event) {
-        event.preventDefault();
-        this.props.searchRecipes(this.state.term);
-    }
-
-    render () {
+    render() {
         return (
-            <form onSubmit={this.onFormSubmit}>
-                <input value={this.state.term} onChange={this.onInputChange}  />
-                <input type="submit"/>
-            </form>
+        <div id="showcase" className="grid">
+            <div className="bg-image" />
+            <div className="content-wrap">
+                    <h2>Eat</h2>
+                    <h1>Taste</h1>
+                    <h2>Grow</h2> 
+                    <form className="search-bar" onSubmit={this.onFormSubmit.bind(this)}>
+                            <input 
+                                type="search" 
+                                className="search" 
+                                placeholder="Do you want to eat something?" 
+                                value={this.props.term} 
+                                onChange={this.onInputChange.bind(this)} 
+                            />
+                            <button className="icon"><i className="fa fa-search" /></button>
+                    </form>
+            </div>
+        </div> 
         );
     }
 }
 
-function mapDispatchToProps(dispatch) {
-    return bindActionCreators( { searchRecipes }, dispatch);
-}
+const mapStateToProps = (state) => {
+    return {
+        term: state.recipes.term
+    };
+};
 
-export default connect(null, mapDispatchToProps)(SearchBar);
+export default connect(mapStateToProps, { searchRecipes, searchTermChanged })(SearchBar);

@@ -28,12 +28,17 @@
   "dependencies": {
     "axios": "^0.17.1",
     "babel-preset-stage-1": "^6.1.18",
+    "eslint-config-rallycoding": "^3.2.0",
+    "fa": "^1.0.1",
+    "font-awesome": "^4.7.0",
     "lodash": "^3.10.1",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
+    "react-image": "^1.3.1",
+    "react-lazy-image": "^1.1.0",
     "react-redux": "4.3.0",
     "react-router": "^2.0.1",
     "redux": "^3.0.4",
-    "redux-promise": "^0.5.3"
+    "redux-thunk": "^2.2.0"
   }
 }
