@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Image from 'react-lazy-image';
 
+
 class ListItem extends Component {
      
      setImageSize(url) {
