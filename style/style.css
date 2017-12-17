@@ -88,6 +88,12 @@ h1 {
 }
 
 /* search results */
+.results a:link, a:visited, a:hover {
+    text-decoration: none;
+    font-family: 'lato';
+    color: rgb(136, 136, 136);
+}
+
 
 .results ul {
     list-style-type: none;
@@ -107,13 +113,6 @@ h1 {
 .results .src {
     width: 100%;
 }
-
-.results h3,p {
-    font-family: 'lato';
-    font-weight: 350;
-    opacity: 0.8;
-}
-
 
 footer h3 {
     font-family: 'lato';

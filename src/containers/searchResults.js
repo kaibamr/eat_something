@@ -22,8 +22,8 @@ class SearchResults extends Component {
 
     renderRecipes(singleRecipe) {
         const { id, recipeName, rating, smallImageUrls } = singleRecipe;
-        return (     
-             <ListItem key={id} name={recipeName} rating={rating} smallImg={smallImageUrls} />
+        return ( 
+             <ListItem key={id} url={id} name={recipeName} rating={rating} smallImg={smallImageUrls} />
         );
     }
 
