@@ -22,12 +22,12 @@ class ListItem extends Component {
         const { id, smallImg, name, rating } = this.props;
         return (
             <li key={id}>
-            <Image
-                className="src" source={this.setImageSize(smallImg)}
-            />
-            <h3 className="results-title">{name}</h3>
-            <p>Rating {this.renderStars(rating)}</p>
-        </li>
+                <Image
+                    className="src" source={this.setImageSize(smallImg)}
+                />
+                <h3 className="results-title">{name}</h3>
+                <p>Rating {this.renderStars(rating)}</p>
+            </li>
         );
     }
 }
