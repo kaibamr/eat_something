@@ -6,7 +6,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import ReduxThunk from 'redux-thunk';
 
 import Main from './components/main';
-import ShowRecipe from './components/showRecipe';
+import ShowRecipe from './containers/showRecipe';
 import reducers from './reducers';
 
 const store = createStore(reducers, {}, applyMiddleware(ReduxThunk));

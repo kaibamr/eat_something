@@ -22,7 +22,7 @@ class ListItem extends Component {
     render() {
         const { id, smallImg, name, rating, url } = this.props;
         return (
-            <li key={id}>
+            <li key={id} onClick={() => this.props.get(id)}>
                 <Link to={`/recipe/${url}`}>
                 <Image
                     className="src" source={this.setImageSize(smallImg)}

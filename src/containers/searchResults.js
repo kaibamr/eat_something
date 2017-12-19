@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import ListItem from '../components/listItem';
+import { getRecipe } from '../actions';
 
 class SearchResults extends Component {
     renderLoading() {
@@ -23,7 +24,7 @@ class SearchResults extends Component {
     renderRecipes(singleRecipe) {
         const { id, recipeName, rating, smallImageUrls } = singleRecipe;
         return ( 
-             <ListItem key={id} url={id} name={recipeName} rating={rating} smallImg={smallImageUrls} />
+             <ListItem key={id} url={id} name={recipeName} rating={rating} smallImg={smallImageUrls} get={() => this.props.getRecipe(id)} />
         );
     }
 
@@ -49,4 +50,4 @@ const mapStateToProps = (state) => {
     };
 };
 
-export default connect(mapStateToProps, null)(SearchResults);
+export default connect(mapStateToProps, { getRecipe })(SearchResults);
