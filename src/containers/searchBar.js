@@ -16,7 +16,7 @@ class SearchBar extends Component {
 
     render() {
         return (
-        <div id="showcase" className="grid">
+        <div className="showcase grid">
             <div className="bg-image" />
             <div className="content-wrap">
                     <h2>Eat</h2>

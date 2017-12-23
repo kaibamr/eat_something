@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 import ListItem from '../components/listItem';
 import { getRecipe } from '../actions';
 
 class SearchResults extends Component {
+
     renderLoading() {
         if (this.props.loading) {
             return (
@@ -24,10 +24,15 @@ class SearchResults extends Component {
     renderRecipes(singleRecipe) {
         const { id, recipeName, rating, smallImageUrls } = singleRecipe;
         return ( 
-             <ListItem key={id} url={id} name={recipeName} rating={rating} smallImg={smallImageUrls} get={() => this.props.getRecipe(id)} />
+            <ListItem 
+                key={id} 
+                url={id} 
+                name={recipeName} 
+                rating={rating} 
+                smallImg={smallImageUrls} 
+            />
         );
     }
-
 
     render() {
         const { recipes } = this.props;

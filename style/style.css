@@ -5,7 +5,6 @@ body {
     padding: 0;
     background: #333;
     color: #fff;
-    text-align: center;
 }
 
 :focus {
@@ -13,11 +12,11 @@ body {
 }
 
 
-#showcase {
+.showcase {
     min-height: 400px;
 }
 
-#showcase .bg-image {
+.showcase .bg-image {
     position: absolute;
     background: #333 url('img/food.png');
     background-position: center;
@@ -30,21 +29,22 @@ body {
     opacity: 0.6;
 }
 
-h1, h2 {
+.showcase h1, h2 {
     margin: 0;
     text-transform: uppercase;
     opacity: 0.7;  
+    text-align: center;
 }
 
-h2 {
+.showcase, .results h2 {
     letter-spacing: 12px;
     font-family: 'lato';
     padding: 15px;
     font-weight: 300;
-    margin-bottom: 15px;
+    margin-bottom: 15px
 }
 
-h1 {
+.showcase h1 {
     font-family: 'open sans';
     font-size: 6.5rem;
     letter-spacing: 4px;
@@ -94,6 +94,9 @@ h1 {
     color: rgb(136, 136, 136);
 }
 
+.results h3, p {
+    text-align: center;
+}
 
 .results ul {
     list-style-type: none;
@@ -126,17 +129,25 @@ footer h3 {
     display: none !important;
 }
 
+.single-title {
+    padding: 10px;
+    border-bottom: 1px solid #fff;
+}
+
+
+
+
  @media(min-width: 700px) {
     .grid {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
-    #showcase .content-wrap {
+    .showcase .content-wrap {
         grid-column: 2/4;
     }
 
-    ul li {
+    .results ul li {
         grid-column: span 2;
     }
     
@@ -151,7 +162,7 @@ footer h3 {
 }
 
 @media(min-width: 1100px) { 
-   ul li {
+   .results ul li {
      grid-column: span 1;
    }
 } 

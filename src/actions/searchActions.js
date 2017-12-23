@@ -5,9 +5,11 @@ import {
     SEARCH_TERM
 } from './types';
 
+import {
+    APP_KEY,
+    APP_ID
+} from './api';
 
-const APP_KEY = '2e4429e06fb3b4423f9ad06aab8cabc3';
-const APP_ID = 'b8d87e7c';
 const SEARCH_URL = 'http://api.yummly.com/v1/api/recipes?';
 
 export function searchTermChanged(term) {
