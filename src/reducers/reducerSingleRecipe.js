@@ -1,6 +1,7 @@
 import {
     GET_RECIPE_START,
-    GET_RECIPE_FETCH
+    GET_RECIPE_FETCH,
+    RESET_DATA
 } from '../actions/types';
 
 const INITIAL_STATE = {
@@ -13,8 +14,9 @@ export default function (state = INITIAL_STATE, action) {
         case GET_RECIPE_START:
             return { ...state, loading: true };
         case GET_RECIPE_FETCH:
-            console.log(action.payload.data);
             return { ...state, data: action.payload.data, loading: false };
+        case RESET_DATA:
+            return INITIAL_STATE;
         default:
             return state;
     }

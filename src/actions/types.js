@@ -4,4 +4,4 @@ export const SEARCH_TERM = 'search_term';
 
 export const GET_RECIPE_START = 'get_recipe_start';
 export const GET_RECIPE_FETCH = 'get_recipe_fetch';
-export const ADD_PROPS = 'add_props';
+export const RESET_DATA = 'reset_data';

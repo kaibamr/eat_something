@@ -1,7 +1,8 @@
 import axios from 'axios';
 import {
     GET_RECIPE_START,
-    GET_RECIPE_FETCH
+    GET_RECIPE_FETCH,
+    RESET_DATA
 } from './types';
 
 import {
@@ -15,6 +16,12 @@ export function getRecipe(id) {
     return (dispatch) => {
         dispatch({ type: GET_RECIPE_START });
         getRecipeFetch(dispatch, id);
+    };
+}
+
+export function resetData() {
+    return {
+        type: RESET_DATA
     };
 }
 

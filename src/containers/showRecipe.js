@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getRecipe } from '../actions';
+import { getRecipe, resetData } from '../actions';
 import HeaderRecipe from '../components/headerRecipe';
 import InfoBar from '../components/infoBar';
 import Content from '../components/content';
@@ -20,6 +20,10 @@ class ShowRecipe extends Component {
         } 
     }
 
+    goBack() {
+        this.props.resetData();
+    }
+
     renderRecipe(data) {
         const { rating, name, ingredientLines, totalTime, numberOfServings } = data;
         const url = data.images[0].hostedSmallUrl;
@@ -28,7 +32,8 @@ class ShowRecipe extends Component {
                 <HeaderRecipe 
                     name={name} 
                     rating={rating} 
-                    url={url} 
+                    url={url}
+                    back={() => this.goBack()} 
                 />
                 <InfoBar 
                     length={ingredientLines.length} 
@@ -58,4 +63,4 @@ const mapStateToProps = (state) => {
     };
 };
 
-export default connect(mapStateToProps, { getRecipe })(ShowRecipe);
+export default connect(mapStateToProps, { getRecipe, resetData })(ShowRecipe);

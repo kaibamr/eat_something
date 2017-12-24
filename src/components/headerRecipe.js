@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'react-lazy-image';
-
+import { Link } from 'react-router-dom';
 const HeaderRecipe = (props) => { 
     const { rating, name } = props;
 
@@ -25,6 +25,7 @@ const HeaderRecipe = (props) => {
     return (    
         <div className="header-recipe">
             <div style={style} className="bg-image" />
+            <div className="back-button" onClick={() => props.back()}><Link to="/">Back</Link></div>
             <div className="header-text">
                     <h2>{name}</h2>
                     <h3>Rating {renderStars(rating)}</h3>
