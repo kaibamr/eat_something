@@ -135,7 +135,11 @@ footer h3 {
 }
 
 
-
+ @media(max-width: 410px) {
+     .nutritions {
+         display: none;
+     }
+ }
 
  @media(min-width: 700px) {
     .grid {

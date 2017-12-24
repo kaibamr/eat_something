@@ -35,7 +35,7 @@ class ShowRecipe extends Component {
                     time={totalTime} 
                     servings={numberOfServings}
                 />
-                <Content ingredients={data.ingredientLines} flavors={data.flavors} />
+                <Content ingredients={data.ingredientLines} flavors={data.flavors} source={data.source.sourceRecipeUrl} />
             </div>
         );        
     }

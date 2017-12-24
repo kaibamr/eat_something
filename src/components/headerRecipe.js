@@ -19,7 +19,7 @@ const HeaderRecipe = (props) => {
         return newLink;
     };
 
-    const style = { backgroundImage: 'url(' + setImageSize(props.url, 1200) + ')' };
+    const style = { backgroundImage: 'url(' + setImageSize(props.url, 360) + ')' };
     const smallUrl = setImageSize(props.url, 280);
 
     return (    

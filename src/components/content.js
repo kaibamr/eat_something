@@ -1,16 +1,17 @@
 import React from 'react';
-import CircularProgressbar from 'react-circular-progressbar';
+import Flavors from './flavors';
+
 
 const Content = (props) => {
 
-    const { ingredients, flavors } = props;
-
+    const { ingredients, flavors, source } = props;
+    // const { Bitter, Meaty, Piquant, Salty, Sour, Sweet } = flavors;
     const renderIngredients = (ing) => {
         return (
             <li key={ing}><span>{ing}</span></li>
         );
     };
-
+    
     return (
         <div className="content-wrapper">
         <div className="content">
@@ -20,22 +21,11 @@ const Content = (props) => {
                   {ingredients.map(renderIngredients.bind(this))}
                 </ul>
             </div>
-            <div className="nutritions">
-                <h3>Flavors</h3>
-                <ul className="nutritions-list">
-                    {/* <div className="first-line">
-                        <li className="circle-list-item"><CircularProgressbar percentage={60} className="circle" initialAnimation="true" /></li>
-                        <li className="circle-list-item"><CircularProgressbar percentage={60} className="circle" initialAnimation="true" /></li>
-                        <li className="circle-list-item"><CircularProgressbar percentage={60} className="circle" initialAnimation="true" /></li>
-                    </div>
-                    <div className="second-line">
-                        <li className="circle-list-item"><CircularProgressbar percentage={60} className="circle" initialAnimation="true" /></li>
-                        <li className="circle-list-item"><CircularProgressbar percentage={60} className="circle" initialAnimation="true" /></li>
-                        <li className="circle-list-item"><CircularProgressbar percentage={60} className="circle" initialAnimation="true" /></li>
-                    </div> */}
-                </ul>
-            </div>
+            <Flavors flavors={flavors} />
         </div>
+        <div className="recipe-wrapper">
+            <div className="recipe-button"><a href={source}>Read Directions</a></div>
+        </div>     
     </div>
     );
 };
