@@ -24,7 +24,7 @@ const Content = (props) => {
             <Flavors flavors={flavors} />
         </div>
         <div className="recipe-wrapper">
-            <div className="recipe-button"><a href={source}>Read Directions</a></div>
+            <div className="recipe-button"><a href={source} target="_blank">Read Directions</a></div>
         </div>     
     </div>
     );
