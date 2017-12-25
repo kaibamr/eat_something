@@ -56,12 +56,45 @@
     opacity: 0.8;
 }
 
+.back-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 50px;
+    text-align: center;
+    height: 50px;
+    background-color: rgb(39, 39, 39);
+    border-radius: 5px;
+    display: block;
+}
+
+.back-button a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'lato';
+    display: block;
+    line-height: 50px;
+}
+
+.back-button:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.back-button a:hover {
+    color: rgb(39, 39, 39);
+}
+
+.back-button a:link a:visited a:hover a:active {
+    color: #fff;
+}
+
 /* info section */
 
 .info-text {
     width: 100%;
     height: 70px;
-    background-color: rgba(255, 255, 255, 0.8);
+    /* background-color: #24292E; */
+    background-color: rgb(39, 39, 39);
 }
 
 .info-text .wrapper {
@@ -83,14 +116,16 @@
     font-size: 1.3em;
     font-weight: bold;
     font-family: 'lato';
-    color: #333;
+    color: #fff;
+    opacity: 0.5;
 }
 
 .info-text .item .bottom {
     margin-top: -30px;
     font-size: 1em;
     font-style: italic;
-    color: #333;
+    color: #fff;
+    opacity: 0.4;
 }
 
 
@@ -135,9 +170,35 @@
 
 .recipe-button {
     text-align: center;
-    padding: 15px;
-    background-color: rgba(255, 255, 255, 0.8);
+    height: 50px;
+    background-color: rgb(39, 39, 39);
     margin-top: 50px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: block;
+}
+
+.recipe-button a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'lato';
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 50px;
+}
+
+
+.recipe-button a:link a:visited a:hover a:active {
+    color: #fff;
+}
+
+.recipe-button:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.recipe-button a:hover {
+    color: rgb(39, 39, 39);
 }
 
 /* circle */

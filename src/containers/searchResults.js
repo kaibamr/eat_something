@@ -11,10 +11,16 @@ class SearchResults extends Component {
                 <div className="loader">Loading...</div>
             );
         } else if (!this.props.loading && !this.props.recipes) {
+            
             return (
                 <h2>Type something to search..</h2>
+                
             );
-        } 
+        } else if (this.props.recipes.length === 0) {
+            return (
+                <h2>No results found</h2>
+            );
+        }
         
         return (
             <h2>Results</h2>

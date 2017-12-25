@@ -25,7 +25,7 @@ const HeaderRecipe = (props) => {
     return (    
         <div className="header-recipe">
             <div style={style} className="bg-image" />
-            <div className="back-button" onClick={() => props.back()}><Link to="/">Back</Link></div>
+            <div className="back-button" onClick={() => props.back()}><Link to="/"><i className="fa fa-arrow-left" aria-hidden="true" /></Link></div>
             <div className="header-text">
                     <h2>{name}</h2>
                     <h3>Rating {renderStars(rating)}</h3>
