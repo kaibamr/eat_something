@@ -10,7 +10,7 @@ import {
     APP_KEY
 } from './api';
 
-const SEARCH_URL = 'http://api.yummly.com/v1/api/recipe/';
+const SEARCH_URL = 'https://api.yummly.com/v1/api/recipe/';
 
 export function getRecipe(id) {
     return (dispatch) => {
