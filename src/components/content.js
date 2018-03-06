@@ -5,7 +5,6 @@ import Flavors from './flavors';
 const Content = (props) => {
 
     const { ingredients, flavors, source } = props;
-    // const { Bitter, Meaty, Piquant, Salty, Sour, Sweet } = flavors;
     const renderIngredients = (ing) => {
         return (
             <li key={ing}><span>{ing}</span></li>
