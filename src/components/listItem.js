@@ -7,6 +7,9 @@ const ListItem = (props) => {
      const setImageSize = (url) => {
          const link = url[0];
          const newLink = link.replace('s90', 's600');
+         if(!newLink.includes('https')) {
+             return newLink.substring(0, 4) + 's:' + newLink.substring(5);
+         }
          return newLink;
      };
 
