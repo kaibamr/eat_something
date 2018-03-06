@@ -14,6 +14,9 @@ const HeaderRecipe = (props) => {
 
     const setImageSize = (url, size) => {
         const newLink = url.replace('s90', `s${size}`);
+        if(!newLink.includes('https')) {
+            return newLink.substring(0, 4) + 's:' + newLink.substring(5);
+        }
         return newLink;
     };
 
